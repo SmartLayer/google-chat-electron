@@ -24,8 +24,8 @@
     "build:mac-zip": "bash ./mac/installer-zip.sh",
     "build:mac-arm-zip": "bash ./mac/installer-arm-zip.sh",
     "prepack:linux": "npm run clean:dist && npm run ts",
-    "pack:linux": "electron-packager . --platform=linux --arch=x64 --asar --overwrite --out=./dist/",
-    "build:deb": "electron-installer-debian --config=./debian/config.json --arch=amd64",
+    "pack:linux": "electron-packager . --platform=linux --arch=arm64 --asar --overwrite --out=./dist/",
+    "build:deb": "electron-installer-debian --config=./debian/config.json --arch=arm64",
     "build:deb-checksum": "cd ./dist/installers && sha512sum *.deb > google-chat-electron-deb-SHA512.txt"
   },
   "devDependencies": {
